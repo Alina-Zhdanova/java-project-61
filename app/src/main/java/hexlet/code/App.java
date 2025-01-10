@@ -7,7 +7,7 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n0 - Exit\nYour choice: ");
+        System.out.print("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n0 - Exit\n3 - Calc\nYour choice: ");
         String userChoice = scanner.next();
 
         if (userChoice.equals("1")) {
