@@ -8,10 +8,15 @@ public class Even {
 
         Scanner scanner = new Scanner(System.in);
 
+        System.out.print("May I have your name? ");
+        String userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+
         int correctAnswers = 0;  // счётчик правильных ответов
         int win = 3;  // необходимое количество правильных ответов для победы
 
-        while (correctAnswers <= win) {
+        while (correctAnswers < win) {
 
             Random random = new Random();  // тут генерируется рандомное число
             int randomNumber = random.nextInt (100);
@@ -24,7 +29,7 @@ public class Even {
             }
 
             // в этом блоке идёт взаимодействие с пользователем и получение его ответа
-            System.out.print("Answer 'yes' if the number is even, otherwise answer 'no'.\nQuestion " + randomNumber + "\nYour answer: ");
+            System.out.print("Question " + randomNumber + "\nYour answer: ");
             String answerUser = scanner.next();
 
             // что будет выдаваться в зависимости от правильности ответа, но нужно продумать выход из программы при неправильном ответе
@@ -32,9 +37,13 @@ public class Even {
                 System.out.println("Correct!");
                 correctAnswers++;
             } else {
-                System.out.println("\"" + answerUser + "\"" + " is wrong answer ;(. Correct answer was " + "\"" + answer + "\"" + "\nLet's try again, Bill!");
+                System.out.println("\"" + answerUser + "\"" + " is wrong answer ;(. Correct answer was " + "\"" + answer + "\"." + "\nLet's try again, " + userName + "!");
+                return;
             }
         }
+
         scanner.close();
+
+        System.out.println("Congratulations, " + userName + "!");
     }
 }

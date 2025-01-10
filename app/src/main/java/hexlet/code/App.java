@@ -15,10 +15,10 @@ public class App {
         }
 
         if (userChoice.equals("2")) {
-            // Greet.greet();
             Even.even();
         }
 
         scanner.close();
+
     }
 }
