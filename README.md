@@ -1,2 +1,4 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Alina-Zhdanova/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Alina-Zhdanova/java-project-61/actions)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/226ea1e275fc09d192d4/maintainability)](https://codeclimate.com/github/Alina-Zhdanova/java-project-61/maintainability)
