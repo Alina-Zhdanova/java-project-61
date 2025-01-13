@@ -18,6 +18,10 @@ public class App {
             Even.even();
         }
 
+        if (userChoice.equals("3")) {
+            Calc.calc();
+        }
+
         scanner.close();
 
     }
