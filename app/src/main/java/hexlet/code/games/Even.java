@@ -23,8 +23,8 @@ public class Even {
         return new String[]{strRandomTask, answer};
     }
 
-    public static String[][] getRandomTasksAndAnswers(int amount) {
-        amount = 3;
+    public static String[][] getRandomTasksAndAnswers() {
+        int amount = 3;
         String[][] RandomTasksAndAnswers = new String[amount][2];
         for (int i = 0; i < amount; i++) {
             String[] randomTaskAndAnswer = getRandomTaskAndAnswer();
@@ -34,9 +34,8 @@ public class Even {
     }
 
     public static void play() {
-        int amount = 3;
         String taskDescription = getTaskDescription();
-        String[][] RandomTasksAndAnswers = getRandomTasksAndAnswers(amount);
+        String[][] RandomTasksAndAnswers = getRandomTasksAndAnswers();
         Engine.engine(taskDescription, RandomTasksAndAnswers);
     }
 }

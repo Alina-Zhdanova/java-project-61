@@ -23,7 +23,7 @@ public class App {
         }
 
         if (userChoice.equals("3")) {
-            Calc.calc();
+            Calc.play();
         }
 
         scanner.close();

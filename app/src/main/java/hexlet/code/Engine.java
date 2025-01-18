@@ -13,9 +13,6 @@ public class Engine {
             System.out.println("Hello, " + userName + "!");
             System.out.println(taskDescription);
 
-            // calc - System.out.println("What is the result of the expression?");
-
-
             int correctAnswers = 0;  // счётчик правильных ответов
             int win = 3;  // необходимое количество правильных ответов для победы
 
