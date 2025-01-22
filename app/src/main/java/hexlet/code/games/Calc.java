@@ -16,7 +16,7 @@ public class Calc {
         String[] operations = {"+", "-", "*"};
         var randomOperation = operations[random.nextInt(operations.length)];
         int randomNumberTwo = random.nextInt(100);
-        String strRandomTask = randomNumberOne + randomOperation + randomNumberTwo;
+        String strRandomTask = randomNumberOne + " " + randomOperation + " " + randomNumberTwo;
 
         // проверяем, какой должен быть ответ и переводим его в строку для сравнения с ответом пользователя
         int result = switch (randomOperation) {
