@@ -12,8 +12,9 @@ public class GCD {
     public static String[] getRandomTaskAndAnswer() {
 
         Random random = new Random();  // тут генерируются рандомные числа
-        int randomNumberOne = random.nextInt(100);
-        int randomNumberTwo = random.nextInt(100);
+        int upperLimit = 100;
+        int randomNumberOne = random.nextInt(upperLimit);
+        int randomNumberTwo = random.nextInt(upperLimit);
         String strRandomTask = randomNumberOne + " " + randomNumberTwo;
 
         // находи НОД для проверки ответа пользователя

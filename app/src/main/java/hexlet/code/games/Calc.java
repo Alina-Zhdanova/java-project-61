@@ -12,10 +12,11 @@ public class Calc {
     public static String[] getRandomTaskAndAnswer() {
         // пытаюсь сделать так, чтобы выдавался рандомный оператор с рандомными числами
         Random random = new Random();  // тут генерируется рандомное число
-        int randomNumberOne = random.nextInt(100);
+        int upperLimit = 100;
+        int randomNumberOne = random.nextInt(upperLimit);
         String[] operations = {"+", "-", "*"};
         var randomOperation = operations[random.nextInt(operations.length)];
-        int randomNumberTwo = random.nextInt(100);
+        int randomNumberTwo = random.nextInt(upperLimit);
         String strRandomTask = randomNumberOne + " " + randomOperation + " " + randomNumberTwo;
 
         // проверяем, какой должен быть ответ и переводим его в строку для сравнения с ответом пользователя

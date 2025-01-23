@@ -11,7 +11,8 @@ public class Even {
 
     public static String[] getRandomTaskAndAnswer() {
         Random random = new Random();
-        int randomTask = random.nextInt(100);
+        int upperLimit = 100;
+        int randomTask = random.nextInt(upperLimit);
         String strRandomTask = String.valueOf(randomTask);
 
         String answer;

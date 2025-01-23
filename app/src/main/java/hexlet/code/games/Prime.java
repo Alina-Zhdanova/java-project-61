@@ -13,7 +13,9 @@ public class Prime {
 
         // генерируем рандомное число
         Random random = new Random();
-        int randomTask = random.nextInt(2, 100);
+        int lowerLimit = 2;
+        int upperLimit = 100;
+        int randomTask = random.nextInt(lowerLimit, upperLimit);
         String strRandomTask = String.valueOf(randomTask);
 
         // проверяем, является ли оно простым

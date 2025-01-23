@@ -10,5 +10,8 @@ run:
 lint:
 		./gradlew checkstyleMain
 
+test:
+	./gradlew test
+
 check-deps:
 	./gradlew dependencyUpdates -Drevision=release
