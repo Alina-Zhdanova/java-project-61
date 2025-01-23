@@ -13,21 +13,21 @@ public class Progression {
 
         // рандомим длину прогрессии
         Random random = new Random();
-        int lowerLimit = 5;
-        int upperLimit = 11;
-        int progressionLength = random.nextInt(lowerLimit, upperLimit);
+        final int lowerLimitLength = 5;
+        final int upperLimitLength = 11;
+        int progressionLength = random.nextInt(lowerLimitLength, upperLimitLength);
 
         // создаём массив рандомной величины, которую определили ранее
         String[] fullProgression = new String[progressionLength];
 
         // определяем первое число прогрессии, вносим его в массив, определяем шаг прогрессии
-        upperLimit = 100;
+        final int upperLimit = 100;
         int nextNumberProgression = random.nextInt(upperLimit);
         String strNextNumberProgression = String.valueOf(nextNumberProgression);
         fullProgression[0] = strNextNumberProgression;
-        lowerLimit = 1;
-        upperLimit = 10;
-        int progressionStep = random.nextInt(lowerLimit, upperLimit);
+        final int lowerLimitStep = 1;
+        final int upperLimitStep = 10;
+        int progressionStep = random.nextInt(lowerLimitStep, upperLimitStep);
 
         // в цикле заполняем массив числами с заданным шагом
         for (int i = 1; i < progressionLength; i++) {
@@ -48,7 +48,7 @@ public class Progression {
     }
 
     public static String[][] getRandomTasksAndAnswers() {
-        int amount = 3;
+        final int amount = 3;
         String[][] randomTasksAndAnswers = new String[amount][2];
         for (int i = 0; i < amount; i++) {
             String[] randomTaskAndAnswer = getRandomTaskAndAnswer();

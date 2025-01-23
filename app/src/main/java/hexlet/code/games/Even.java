@@ -11,8 +11,8 @@ public class Even {
 
     public static String[] getRandomTaskAndAnswer() {
         Random random = new Random();
-        int upperLimit = 100;
-        int randomTask = random.nextInt(upperLimit);
+        final int upperLimit = 100;
+        final int randomTask = random.nextInt(upperLimit);
         String strRandomTask = String.valueOf(randomTask);
 
         String answer;
@@ -25,7 +25,7 @@ public class Even {
     }
 
     public static String[][] getRandomTasksAndAnswers() {
-        int amount = 3;
+        final int amount = 3;
         String[][] randomTasksAndAnswers = new String[amount][2];
         for (int i = 0; i < amount; i++) {
             String[] randomTaskAndAnswer = getRandomTaskAndAnswer();

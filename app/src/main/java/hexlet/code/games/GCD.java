@@ -12,7 +12,7 @@ public class GCD {
     public static String[] getRandomTaskAndAnswer() {
 
         Random random = new Random();  // тут генерируются рандомные числа
-        int upperLimit = 100;
+        final int upperLimit = 100;
         int randomNumberOne = random.nextInt(upperLimit);
         int randomNumberTwo = random.nextInt(upperLimit);
         String strRandomTask = randomNumberOne + " " + randomNumberTwo;
@@ -41,7 +41,7 @@ public class GCD {
     }
 
     public static String[][] getRandomTasksAndAnswers() {
-        int amount = 3;
+        final int amount = 3;
         String[][] randomTasksAndAnswers = new String[amount][2];
         for (int i = 0; i < amount; i++) {
             String[] randomTaskAndAnswer = getRandomTaskAndAnswer();

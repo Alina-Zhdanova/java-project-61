@@ -12,7 +12,7 @@ public class Calc {
     public static String[] getRandomTaskAndAnswer() {
         // пытаюсь сделать так, чтобы выдавался рандомный оператор с рандомными числами
         Random random = new Random();  // тут генерируется рандомное число
-        int upperLimit = 100;
+        final int upperLimit = 100;
         int randomNumberOne = random.nextInt(upperLimit);
         String[] operations = {"+", "-", "*"};
         var randomOperation = operations[random.nextInt(operations.length)];
@@ -31,7 +31,7 @@ public class Calc {
     }
 
     public static String[][] getRandomTasksAndAnswers() {
-        int amount = 3;
+        final int amount = 3;
         String[][] randomTasksAndAnswers = new String[amount][2];
         for (int i = 0; i < amount; i++) {
             String[] randomTaskAndAnswer = getRandomTaskAndAnswer();
