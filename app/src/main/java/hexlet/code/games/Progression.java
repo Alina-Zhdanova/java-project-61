@@ -13,7 +13,7 @@ public class Progression {
 
         // рандомим длину прогрессии
         Random random = new Random();
-        int progressionLength = random.nextInt(5,11);
+        int progressionLength = random.nextInt(5, 11);
 
         // создаём массив рандомной величины, которую определили ранее
         String[] fullProgression = new String[progressionLength];
@@ -31,7 +31,8 @@ public class Progression {
             fullProgression[i] = strNextNumberProgression;
         }
 
-        // рандомим позицию, которая должна замениться на ".." и заменяем, предварительно сохранив значение для проверки ответа
+        // рандомим позицию, которая должна замениться на ".." и заменяем,
+        // предварительно сохранив значение для проверки ответа
         int change = random.nextInt(progressionLength);
         String answer = fullProgression[change];
         fullProgression[change] = "..";
@@ -43,17 +44,17 @@ public class Progression {
 
     public static String[][] getRandomTasksAndAnswers() {
         int amount = 3;
-        String[][] RandomTasksAndAnswers = new String[amount][2];
+        String[][] randomTasksAndAnswers = new String[amount][2];
         for (int i = 0; i < amount; i++) {
             String[] randomTaskAndAnswer = getRandomTaskAndAnswer();
-            RandomTasksAndAnswers[i] = randomTaskAndAnswer;
+            randomTasksAndAnswers[i] = randomTaskAndAnswer;
         }
-        return RandomTasksAndAnswers;
+        return randomTasksAndAnswers;
     }
 
     public static void play() {
         String taskDescription = getTaskDescription();
-        String[][] RandomTasksAndAnswers = getRandomTasksAndAnswers();
-        Engine.engine(taskDescription, RandomTasksAndAnswers);
+        String[][] randomTasksAndAnswers = getRandomTasksAndAnswers();
+        Engine.engine(taskDescription, randomTasksAndAnswers);
     }
 }

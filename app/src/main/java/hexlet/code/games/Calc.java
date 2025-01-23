@@ -31,17 +31,17 @@ public class Calc {
 
     public static String[][] getRandomTasksAndAnswers() {
         int amount = 3;
-        String[][] RandomTasksAndAnswers = new String[amount][2];
+        String[][] randomTasksAndAnswers = new String[amount][2];
         for (int i = 0; i < amount; i++) {
             String[] randomTaskAndAnswer = getRandomTaskAndAnswer();
-            RandomTasksAndAnswers[i] = randomTaskAndAnswer;
+            randomTasksAndAnswers[i] = randomTaskAndAnswer;
         }
-        return RandomTasksAndAnswers;
+        return randomTasksAndAnswers;
     }
 
     public static void play() {
         String taskDescription = getTaskDescription();
-        String[][] RandomTasksAndAnswers = getRandomTasksAndAnswers();
-        Engine.engine(taskDescription, RandomTasksAndAnswers);
+        String[][] randomTasksAndAnswers = getRandomTasksAndAnswers();
+        Engine.engine(taskDescription, randomTasksAndAnswers);
     }
 }
