@@ -15,7 +15,7 @@ public class Engine {
         System.out.println(taskDescription);
 
         int correctAnswers = 0;  // счётчик правильных ответов
-        int win = 3;  // необходимое количество правильных ответов для победы
+        final int win = 3;  // необходимое количество правильных ответов для победы
 
         while (correctAnswers < win) {
 

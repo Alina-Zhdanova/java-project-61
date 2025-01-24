@@ -13,8 +13,8 @@ public class Prime {
 
         // генерируем рандомное число
         Random random = new Random();
-        int lowerLimit = 2;
-        int upperLimit = 100;
+        final int lowerLimit = 2;
+        final int upperLimit = 100;
         int randomTask = random.nextInt(lowerLimit, upperLimit);
         String strRandomTask = String.valueOf(randomTask);
 
@@ -34,7 +34,7 @@ public class Prime {
     }
 
     public static String[][] getRandomTasksAndAnswers() {
-        int amount = 3;
+        final int amount = 3;
         String[][] randomTasksAndAnswers = new String[amount][2];
         for (int i = 0; i < amount; i++) {
             String[] randomTaskAndAnswer = getRandomTaskAndAnswer();
