@@ -12,7 +12,7 @@ public class Even {
     public static String[] getRandomTaskAndAnswer() {
         Random random = new Random();
         final int upperLimit = 100;
-        final int randomTask = random.nextInt(upperLimit);
+        int randomTask = random.nextInt(upperLimit);
         String strRandomTask = String.valueOf(randomTask);
 
         String answer;

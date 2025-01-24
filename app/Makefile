@@ -11,7 +11,7 @@ lint:
 		./gradlew checkstyleMain
 
 test:
-	./gradlew test
+		./gradlew test
 
 check-deps:
-	./gradlew dependencyUpdates -Drevision=release
+		./gradlew dependencyUpdates -Drevision=release
