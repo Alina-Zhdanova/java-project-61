@@ -43,8 +43,9 @@ public class Prime {
     }
 
     public static void play() {
+        final int tasksAmount = 3;
         String taskDescription = getTaskDescription();
-        String[][] randomTasksAndAnswers = getRandomTasksAndAnswers(3);
+        String[][] randomTasksAndAnswers = getRandomTasksAndAnswers(tasksAmount);
         Engine.engine(taskDescription, randomTasksAndAnswers);
     }
 }
