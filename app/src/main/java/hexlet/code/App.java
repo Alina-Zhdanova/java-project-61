@@ -26,28 +26,17 @@ public class App {
                 Your choice:\s""");
         String userChoice = scanner.next();
 
-        if (userChoice.equals("1")) {
-            Greet.greet();
-        }
-
-        if (userChoice.equals("2")) {
-            Even.play();
-        }
-
-        if (userChoice.equals("3")) {
-            Calc.play();
-        }
-
-        if (userChoice.equals("4")) {
-            GCD.play();
-        }
-
-        if (userChoice.equals("5")) {
-            Progression.play();
-        }
-
-        if (userChoice.equals("6")) {
-            Prime.play();
+        switch (userChoice) {
+            case "1" -> Greet.greet();
+            case "2" -> Even.play();
+            case "3" -> Calc.play();
+            case "4" -> GCD.play();
+            case "5" -> Progression.play();
+            case "6" -> Prime.play();
+            case "0" -> {
+                return;
+            }
+            default -> throw new Error("Unknown user choice: " + userChoice + "!");
         }
 
         scanner.close();

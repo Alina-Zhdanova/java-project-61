@@ -47,8 +47,7 @@ public class Progression {
         return new String[]{strRandomTask, answer};
     }
 
-    public static String[][] getRandomTasksAndAnswers() {
-        final int amount = 3;
+    public static String[][] getRandomTasksAndAnswers(int amount) {
         String[][] randomTasksAndAnswers = new String[amount][2];
         for (int i = 0; i < amount; i++) {
             String[] randomTaskAndAnswer = getRandomTaskAndAnswer();
@@ -59,7 +58,7 @@ public class Progression {
 
     public static void play() {
         String taskDescription = getTaskDescription();
-        String[][] randomTasksAndAnswers = getRandomTasksAndAnswers();
+        String[][] randomTasksAndAnswers = getRandomTasksAndAnswers(3);
         Engine.engine(taskDescription, randomTasksAndAnswers);
     }
 }

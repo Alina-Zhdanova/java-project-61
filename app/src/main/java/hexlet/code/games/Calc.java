@@ -24,14 +24,13 @@ public class Calc {
             case "+" -> randomNumberOne + randomNumberTwo;
             case "-" -> randomNumberOne - randomNumberTwo;
             case "*" -> randomNumberOne * randomNumberTwo;
-            default -> 0;
+            default -> throw new Error("Unknown random operation: " + randomOperation + "!");
         };
         String answer = String.valueOf(result);
         return new String[]{strRandomTask, answer};
     }
 
-    public static String[][] getRandomTasksAndAnswers() {
-        final int amount = 3;
+    public static String[][] getRandomTasksAndAnswers(int amount) {
         String[][] randomTasksAndAnswers = new String[amount][2];
         for (int i = 0; i < amount; i++) {
             String[] randomTaskAndAnswer = getRandomTaskAndAnswer();
@@ -42,7 +41,7 @@ public class Calc {
 
     public static void play() {
         String taskDescription = getTaskDescription();
-        String[][] randomTasksAndAnswers = getRandomTasksAndAnswers();
+        String[][] randomTasksAndAnswers = getRandomTasksAndAnswers(3);
         Engine.engine(taskDescription, randomTasksAndAnswers);
     }
 }
